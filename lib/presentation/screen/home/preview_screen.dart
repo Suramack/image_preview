@@ -13,12 +13,15 @@ class PreviewScreen extends StatefulWidget {
 
 /// State of a [PreviewScreen].
 class _PreviewScreenState extends State<PreviewScreen> {
+  // urlController will hold the image URL
   TextEditingController urlController = TextEditingController();
 
   String? imageUrl;
 
+  /// [isMenuOpen] will define the menu status, opened or closed
   bool isMenuOpen = false;
 
+  ///[toggleFullscreen] will toggle full-screen and default size
   void toggleFullscreen() {
     if (html.document.fullscreenElement == null) {
       html.document.documentElement?.requestFullscreen();
